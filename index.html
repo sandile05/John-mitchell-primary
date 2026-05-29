@@ -547,7 +547,7 @@
       inset: 0;
       background:
         linear-gradient(to bottom, rgba(26,61,40,0.45) 0%, rgba(26,61,40,0.25) 50%, rgba(26,61,40,0.65) 100%),
-        url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=80') center/cover no-repeat;
+        url('./assets/hero.jpg') center/cover no-repeat;
     }
 
     .hero__content {
@@ -1473,6 +1473,29 @@
     .gallery-category { display: none; }
     .gallery-category.active { display: block; }
 
+    .gallery-load-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 2.5rem auto 0;
+      padding: 0.9rem 2.2rem;
+      background: transparent;
+      border: 1.5px solid var(--navy-accent);
+      color: var(--navy-accent);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+
+    .gallery-load-more:hover {
+      background: var(--navy-accent);
+      color: var(--white);
+    }
+
     /* Lightbox */
     .lightbox {
       position: fixed;
@@ -2323,7 +2346,7 @@
         <!-- Desktop grid -->
         <div class="staff-grid">
           <div class="staff-card reveal">
-            <img class="staff-card__photo" src="./assets/principal2.jpg" alt="Mrs. J.A. Harmer" loading="lazy" />
+            <img class="staff-card__photo" src="/assets/principal2.jpg" alt="Mrs. J.A. Harmer" loading="lazy" />
             <div class="staff-card__overlay">
               <p class="staff-card__role">Principal</p>
               <h3 class="staff-card__name">Mrs. J.A. Harmer</h3>
@@ -2332,10 +2355,10 @@
             </div>
           </div>
           <div class="staff-card reveal reveal-delay-1">
-            <img class="staff-card__photo" src="./assets/deputy-adams.jpg" alt="Mr. Adams" loading="lazy" />
+            <img class="staff-card__photo" src="/assets/deputy-adams.jpg" alt="Mr. Adams" loading="lazy" />
             <div class="staff-card__overlay">
               <p class="staff-card__role">Deputy Principal</p>
-              <h3 class="staff-card__name">Mr. A. Adams</h3>
+              <h3 class="staff-card__name">Mr. Adams</h3>
               <div class="staff-card__rule"></div>
               <p class="staff-card__bio">Supporting school leadership and ensuring a positive, structured learning environment for all.</p>
             </div>
@@ -2365,7 +2388,7 @@
           <div class="staff-carousel__track" id="staffTrack">
             <div class="staff-carousel__slide">
               <div class="staff-card">
-                <img class="staff-card__photo" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Mrs. J.A. Harmer" loading="lazy" />
+                <img class="staff-card__photo" src="./assets/principal1.jpg" alt="Mrs. J.A. Harmer" loading="lazy" />
                 <div class="staff-card__overlay">
                   <p class="staff-card__role">Principal</p>
                   <h3 class="staff-card__name">Mrs. J.A. Harmer</h3>
@@ -2376,10 +2399,10 @@
             </div>
             <div class="staff-carousel__slide">
               <div class="staff-card">
-                <img class="staff-card__photo" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80" alt="Ms. K. Reddy" loading="lazy" />
+                <img class="staff-card__photo" src="./assets/deputy-adams.jpg" alt="Mr. Adams" loading="lazy" />
                 <div class="staff-card__overlay">
                   <p class="staff-card__role">Deputy Principal</p>
-                  <h3 class="staff-card__name">Ms. K. Reddy</h3>
+                  <h3 class="staff-card__name">Mr. Adams</h3>
                   <div class="staff-card__rule"></div>
                   <p class="staff-card__bio">Supporting leadership and a positive learning environment.</p>
                 </div>
@@ -3129,36 +3152,59 @@
     {
       category: "Awards & Achievements",
       images: [
-        { src: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800&q=80", caption: "Prize Giving Ceremony" },
-        { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Top Achievers 2023" },
-        { src: "https://images.unsplash.com/photo-1549122728-f519709caa9c?w=800&q=80", caption: "Academic Excellence Awards" },
-        { src: "https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=800&q=80", caption: "Annual Awards Day" },
+        { src: "./assets/awards/awards1.jpg", caption: "Prize Giving Ceremony" },
+        { src: "./assets/awards/awards2.jpg", caption: "Top Achievers 2023" },
+        { src: "./assets/awards/awards3.jpg", caption: "Academic Excellence Awards" },
+        { src: "./assets/awards/awards4.jpg", caption: "Annual Awards Day" },
+        { src: "./assets/awards/awards5.jpg", caption: "Prize Giving Ceremony" },
+        { src: "./assets/awards/awards6.jpg", caption: "Top Achievers 2023" },
+        { src: "./assets/awards/awards7.jpg", caption: "Academic Excellence Awards" },
+        { src: "./assets/awards/awards8.jpg", caption: "Annual Awards Day" },
+        { src: "./assets/awards/awards9.jpg", caption: "Prize Giving Ceremony" },
+        { src: "./assets/awards/awards10.jpg", caption: "Top Achievers 2023" },
+        { src: "./assets/awards/awards11.jpg", caption: "Academic Excellence Awards" },
+        { src: "./assets/awards/awards12.jpg", caption: "Annual Awards Day" },
       ]
     },
     {
       category: "School Events",
       images: [
-        { src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80", caption: "Christmas Concert" },
-        { src: "https://images.unsplash.com/photo-1560523159-4a9692d222ef?w=800&q=80", caption: "Heritage Day Celebrations" },
-        { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80", caption: "Cultural Day" },
+        { src: "assets/school-events/events1.jpg", caption: "" },
+        { src: "assets/school-events/events2.jpg", caption: "" },
+        { src: "assets/school-events/events3.jpg", caption: "" },
+        { src: "assets/school-events/events4.jpg", caption: "" },
+        { src: "assets/school-events/events5.jpg", caption: "Cultural Day" },
+      
       ]
     },
     {
       category: "Sports",
       images: [
-        { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Sports Day" },
-        { src: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&q=80", caption: "Athletics Trials" },
-        { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80", caption: "Inter-School Competition" },
+        { src: "./assets/sports/sports1.jpg", caption: "" },
+        { src: "./assets/sports/sports2.jpg", caption: "" },
+        { src: "./assets/sports/sports3.jpg", caption: "" },
+        { src: "./assets/sports/sports4.jpg", caption: "" },
+        { src: "./assets/sports/sports5.jpg", caption: "" },
+        { src: "./assets/sports/sports6.jpg", caption: "" },
+        { src: "./assets/sports/sports7.jpg", caption: "" },
+        { src: "./assets/sports/sports8.jpg", caption: "" },
+        { src: "./assets/sports/sports9.jpg", caption: "" },
+        { src: "./assets/sports/sports10.jpg", caption: "" }
       ]
     },
     {
       category: "School Life",
       images: [
-        { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80", caption: "Classroom Learning" },
-        { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80", caption: "Group Activity" },
-        { src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80", caption: "School Grounds" },
-        { src: "https://images.unsplash.com/photo-1571210059434-edf0dc48e414?w=800&q=80", caption: "Creative Arts" },
-      ]
+        { src: "./assets/life/life1.jpg", caption: "" },
+        { src: "./assets/life/life2.jpg", caption: "" },
+        { src: "./assets/life/life3.jpg", caption: "" },
+        { src: "./assets/life/life4.jpg", caption: "" },
+        { src: "./assets/life/life5.jpg", caption: "" },
+        { src: "./assets/life/life6.jpg", caption: "" },
+        { src: "./assets/life/life7.jpg", caption: "" },
+        { src: "./assets/life/life8.jpg", caption: "" },
+        { src: "./assets/life/life9.jpg", caption: "" },
+        { src: "./assets/life/life10.jpg", caption: "" }]
     }
   ];
 
@@ -3351,15 +3397,63 @@
   initStaffCarousel();
 
   /* --- GALLERY BUILDER --- */
+  const GALLERY_PAGE_SIZE = 10;
+  const galleryVisible = {}; // tracks how many images are visible per category
+
+  function createGalleryItem(img, catIndex, imgIndex) {
+    const item  = document.createElement('div');
+    item.className = 'gallery-item';
+    item.dataset.catIndex = catIndex;
+    item.dataset.imgIndex = imgIndex;
+
+    const image   = document.createElement('img');
+    image.src     = img.src;
+    image.alt     = img.caption || '';
+    image.loading = 'lazy';
+    item.appendChild(image);
+
+    if (img.caption) {
+      const cap       = document.createElement('div');
+      cap.className   = 'gallery-item__caption';
+      cap.textContent = img.caption;
+      item.appendChild(cap);
+    }
+
+    item.addEventListener('click', () => openLightbox(catIndex, imgIndex));
+    return item;
+  }
+
+  function renderGalleryItems(catIndex, masonry, btn) {
+    const cat      = galleryConfig[catIndex];
+    const start    = masonry.children.length;
+    const end      = Math.min(start + GALLERY_PAGE_SIZE, cat.images.length);
+
+    for (let i = start; i < end; i++) {
+      masonry.appendChild(createGalleryItem(cat.images[i], catIndex, i));
+    }
+
+    galleryVisible[catIndex] = end;
+
+    // Hide button if all images shown
+    if (end >= cat.images.length) {
+      btn.style.display = 'none';
+    } else {
+      const remaining = cat.images.length - end;
+      btn.textContent = `Show More (${remaining} remaining)`;
+      btn.style.display = 'inline-flex';
+    }
+  }
+
   function buildGallery() {
     const tabsEl    = document.getElementById('galleryTabs');
     const contentEl = document.getElementById('galleryContent');
     if (!tabsEl || !contentEl || tabsEl.dataset.built) return;
     tabsEl.dataset.built = 'true';
-    tabsEl.innerHTML = '';
+    tabsEl.innerHTML    = '';
     contentEl.innerHTML = '';
 
     galleryConfig.forEach((cat, catIndex) => {
+      // Tab
       const tab = document.createElement('button');
       tab.className   = 'gallery-tab' + (catIndex === 0 ? ' active' : '');
       tab.textContent = cat.category;
@@ -3367,38 +3461,27 @@
       tab.addEventListener('click', () => switchGalleryTab(catIndex));
       tabsEl.appendChild(tab);
 
+      // Section wrapper
       const section = document.createElement('div');
       section.className = 'gallery-category' + (catIndex === 0 ? ' active' : '');
       section.dataset.cat = catIndex;
 
+      // Masonry grid
       const masonry = document.createElement('div');
       masonry.className = 'gallery-masonry';
+      masonry.id = 'gallery-masonry-' + catIndex;
 
-      cat.images.forEach((img, imgIndex) => {
-        const item    = document.createElement('div');
-        item.className = 'gallery-item';
-        item.dataset.catIndex = catIndex;
-        item.dataset.imgIndex = imgIndex;
+      // Show More button
+      const btn = document.createElement('button');
+      btn.className = 'gallery-load-more';
+      btn.style.display = 'none';
+      btn.addEventListener('click', () => renderGalleryItems(catIndex, masonry, btn));
 
-        const image   = document.createElement('img');
-        image.src     = img.src;
-        image.alt     = img.caption || '';
-        image.loading = 'lazy';
-
-        item.appendChild(image);
-
-        if (img.caption) {
-          const cap       = document.createElement('div');
-          cap.className   = 'gallery-item__caption';
-          cap.textContent = img.caption;
-          item.appendChild(cap);
-        }
-
-        item.addEventListener('click', () => openLightbox(catIndex, imgIndex));
-        masonry.appendChild(item);
-      });
+      // Render first batch
+      renderGalleryItems(catIndex, masonry, btn);
 
       section.appendChild(masonry);
+      section.appendChild(btn);
       contentEl.appendChild(section);
     });
 
