@@ -3173,7 +3173,10 @@
     }
   ];
 
-  galleryConfig[0].images = galleryConfig.slice(1).flatMap(c => c.images);
+  galleryConfig[0].images = galleryConfig
+    .slice(1)
+    .flatMap(c => c.images)
+    .sort(() => Math.random() - 0.5);
 
   /* --- ROUTER --- */
   const routes = {
