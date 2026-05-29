@@ -2040,16 +2040,16 @@
       }
 
       .footer__credit-logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  opacity: 0.5;
-  transition: opacity 0.2s var(--ease);
-}
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        opacity: 0.5;
+        transition: opacity 0.2s var(--ease);
+      }
 
-.footer__credit:hover .footer__credit-logo {
-  opacity: 1;
-}
+      .footer__credit:hover .footer__credit-logo {
+        opacity: 1;
+      }
 
       /* ============================================================
        SCROLL-TRIGGERED ANIMATIONS (JS adds .visible class)
@@ -4611,6 +4611,7 @@
         .sort(() => Math.random() - 0.5);
 
       /* --- ROUTER --- */
+      /* --- ROUTER --- */
       const routes = {
         home: "page-home",
         about: "page-about",
@@ -4715,9 +4716,11 @@
       });
       window.addEventListener("hashchange", readHash);
       window.addEventListener("load", () => {
-        const hash = window.location.hash.replace("#", "") || "home";
-        showPage(hash, null, false);
-        currentPage = hash;
+        const hash = window.location.hash.replace("#", "");
+        const page = routes[hash] ? hash : "home";
+        if (!routes[hash]) window.location.hash = "home";
+        showPage(page, null, false);
+        currentPage = page;
       });
 
       /* --- NAV CLICK DELEGATION --- */
