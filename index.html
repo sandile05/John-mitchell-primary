@@ -15,6 +15,8 @@
       --navy-dark:   #1a3d28;
       --green:       #2c5f3f;
       --green-light: #3a7a52;
+      --navy-accent: #0d1f3c;
+      --navy-accent-light: #162d54;
       --gold:        #c9a84c;
       --gold-light:  #e0c06a;
       --white:       #ffffff;
@@ -72,6 +74,7 @@
       font-weight: 700;
       line-height: 1.08;
       letter-spacing: -0.02em;
+      color: var(--navy-accent);
     }
 
     .t-h1 {
@@ -79,6 +82,7 @@
       font-size: clamp(1.9rem, 4vw, 3rem);
       font-weight: 700;
       line-height: 1.15;
+      color: var(--navy-accent);
     }
 
     .t-h2 {
@@ -86,6 +90,7 @@
       font-size: clamp(1.4rem, 3vw, 2.1rem);
       font-weight: 600;
       line-height: 1.2;
+      color: var(--navy-accent);
     }
 
     .t-h3 {
@@ -93,6 +98,7 @@
       font-size: clamp(1.1rem, 2vw, 1.4rem);
       font-weight: 600;
       line-height: 1.3;
+      color: var(--navy-accent);
     }
 
     .t-body {
@@ -145,7 +151,7 @@
     }
 
     .section-title {
-      color: var(--navy);
+      color: var(--navy-accent);
       margin-bottom: 0.4rem;
     }
 
@@ -595,34 +601,6 @@
       justify-content: center;
     }
 
-    .hero__scroll {
-      position: absolute;
-      bottom: 6rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      z-index: 2;
-    }
-
-    .hero__scroll-line {
-      width: 1px;
-      height: 36px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.15); }
-    }
-
     /* Hero info bar */
     .hero__bar {
       position: relative;
@@ -694,7 +672,7 @@
       font-family: var(--font-heading);
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
-      color: var(--navy);
+      color: var(--navy-accent);
       line-height: 1;
       margin-bottom: 0.4rem;
     }
@@ -834,7 +812,7 @@
     }
 
     .about-intro__poem {
-      background: var(--navy);
+      background: var(--navy-accent);
       color: var(--white);
       padding: 2.5rem;
       position: sticky;
@@ -1188,12 +1166,12 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 4px;
-      background: var(--navy);
+      background: var(--navy-accent);
     }
 
     .grade-r-card:nth-child(2)::before { background: var(--green); }
     .grade-r-card:nth-child(3)::before { background: var(--gold); }
-    .grade-r-card:nth-child(4)::before { background: var(--navy-light); }
+    .grade-r-card:nth-child(4)::before { background: var(--navy-accent-light); }
 
     .grade-r-card__stage {
       font-size: 0.65rem;
@@ -1334,7 +1312,7 @@
     .doc-item__check {
       width: 18px;
       height: 18px;
-      border: 1.5px solid var(--gold);
+      border: 1.5px solid var(--navy-accent);
       border-radius: 2px;
       display: flex;
       align-items: center;
@@ -1343,7 +1321,7 @@
       margin-top: 2px;
     }
 
-    .doc-item__check svg { color: var(--gold); }
+    .doc-item__check svg { color: var(--navy-accent); }
 
     .doc-item__text {
       font-size: 0.88rem;
@@ -1597,7 +1575,7 @@
 
     .contact-method__icon {
       width: 44px; height: 44px;
-      background: var(--navy);
+      background: var(--navy-accent);
       color: var(--gold);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
@@ -1648,7 +1626,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gold);
-      background: var(--navy);
+      background: var(--navy-accent);
       font-weight: 600;
     }
 
@@ -1663,7 +1641,7 @@
     .staff-directory tr:hover td { background: rgba(201,168,76,0.04); }
 
     .office-hours {
-      background: var(--navy);
+      background: var(--navy-accent);
       color: var(--white);
       padding: 2.5rem;
       margin-top: 3rem;
@@ -1694,10 +1672,10 @@
        FOOTER
     ============================================================ */
     .footer {
-      background: var(--navy-dark);
+      background: var(--navy-accent);
       color: var(--white);
       padding: 4rem 0 2rem;
-      border-top: 1px solid rgba(201,168,76,0.12);
+      border-top: 1px solid rgba(201,168,76,0.2);
     }
 
     .footer__grid {
@@ -1896,9 +1874,6 @@
       .docs-grid { grid-template-columns: 1fr; }
       .fees-grid { grid-template-columns: 1fr; }
 
-      /* Hero */
-      .hero__scroll { display: none; }
-
       /* Gallery */
       .gallery-masonry { columns: 2; }
 
@@ -1954,6 +1929,24 @@
         height: 40px;
       }
     }
+
+    /* ============================================================
+       CUSTOM SCROLLBAR — cross-browser
+    ============================================================ */
+
+    /* Firefox */
+    * { scrollbar-width: thin; scrollbar-color: #0d1f3c #f5f0e8; }
+
+    /* WebKit — Chrome, Edge, Safari */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f5f0e8; }
+    ::-webkit-scrollbar-thumb {
+      background: #0d1f3c;
+      border-radius: 0;
+      border: 2px solid #f5f0e8;
+      transition: background 0.2s;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
 
   </style>
 </head>
@@ -2111,10 +2104,6 @@
         <div class="hero__ctas">
           <span class="btn btn-primary" data-nav="about">Discover Our School</span>
           <span class="btn btn-outline" data-nav="admissions">Apply Now</span>
-        </div>
-        <div class="hero__scroll">
-          <div class="hero__scroll-line"></div>
-          <span>Scroll</span>
         </div>
       </div>
       <div class="hero__bar">
