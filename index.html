@@ -10,20 +10,20 @@
        CSS CUSTOM PROPERTIES
     ============================================================ */
     :root {
-      --navy:        #0d1f3c;
-      --navy-light:  #162d54;
-      --navy-dark:   #080f1e;
+      --navy:        #2c5f3f;
+      --navy-light:  #3a7a52;
+      --navy-dark:   #1a3d28;
       --green:       #2c5f3f;
       --green-light: #3a7a52;
       --gold:        #c9a84c;
       --gold-light:  #e0c06a;
       --white:       #ffffff;
-      --off-white:   #f5f3ef;
-      --text-dark:   #1a1a2e;
-      --text-mid:    #4a4a6a;
-      --text-light:  #8888aa;
-      --border:      rgba(201,168,76,0.2);
-      --overlay:     rgba(8,15,30,0.62);
+      --off-white:   #faf7f2;
+      --text-dark:   #2c1810;
+      --text-mid:    #5c4033;
+      --text-light:  #9c8070;
+      --border:      rgba(201,168,76,0.25);
+      --overlay:     rgba(26,61,40,0.72);
 
       --font-heading: 'Playfair Display', Georgia, serif;
       --font-body:    'Inter', system-ui, sans-serif;
@@ -239,7 +239,7 @@
     .btn-navy:hover {
       background: var(--navy-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(13,31,60,0.3);
+      box-shadow: 0 8px 24px rgba(44,95,63,0.3);
     }
 
     /* Page-link CTA at bottom of sections */
@@ -540,7 +540,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(8,15,30,0.5) 0%, rgba(8,15,30,0.3) 50%, rgba(8,15,30,0.7) 100%),
+        linear-gradient(to bottom, rgba(26,61,40,0.45) 0%, rgba(26,61,40,0.25) 50%, rgba(26,61,40,0.65) 100%),
         url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=80') center/cover no-repeat;
     }
 
@@ -760,7 +760,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5px;
-      background: var(--navy);
+      background: var(--border);
     }
 
     .quick-link-item {
@@ -907,9 +907,9 @@
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(8,15,30,0.92) 0%,
-        rgba(8,15,30,0.5) 45%,
-        rgba(8,15,30,0.1) 100%
+        rgba(26,61,40,0.92) 0%,
+        rgba(26,61,40,0.45) 45%,
+        rgba(26,61,40,0.08) 100%
       );
       display: flex;
       flex-direction: column;
@@ -921,9 +921,9 @@
     .staff-card:hover .staff-card__overlay {
       background: linear-gradient(
         to top,
-        rgba(8,15,30,0.97) 0%,
-        rgba(8,15,30,0.75) 55%,
-        rgba(8,15,30,0.25) 100%
+        rgba(26,61,40,0.97) 0%,
+        rgba(26,61,40,0.75) 55%,
+        rgba(26,61,40,0.2) 100%
       );
     }
 
@@ -1000,7 +1000,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: rgba(13,31,60,0.2);
+      background: rgba(44,95,63,0.2);
       cursor: pointer;
       transition: background 0.2s, transform 0.2s;
     }
@@ -1220,7 +1220,7 @@
       font-family: var(--font-heading);
       font-size: 3rem;
       font-weight: 900;
-      color: rgba(13,31,60,0.06);
+      color: rgba(44,95,63,0.06);
       line-height: 1;
       margin-bottom: 0.2rem;
     }
@@ -1298,7 +1298,7 @@
       font-family: var(--font-heading);
       font-size: 4rem;
       font-weight: 900;
-      color: rgba(13,31,60,0.05);
+      color: rgba(44,95,63,0.05);
       line-height: 0.9;
       margin-bottom: 0.8rem;
     }
@@ -1481,7 +1481,7 @@
     .gallery-item__caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(8,15,30,0.85), transparent);
+      background: linear-gradient(to top, rgba(26,61,40,0.85), transparent);
       padding: 1.5rem 1rem 0.8rem;
       color: rgba(255,255,255,0.9);
       font-size: 0.72rem;
